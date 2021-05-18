@@ -11,11 +11,11 @@ This project contains an experiment with the following idea:
   
 ESP32 files
 -----------
-* **boot.py** Runs after each boot of the ESP32.
-* **main.py** The main function.
-* **ble_discovery.py** Contains the BLE scanner.
-* **ble_advertising.py** Contains supporting BLE functions.
-* **umqttsimple.py** Contains the neccessary MQTT functions.
+* `boot.py` Runs after each boot of the ESP32.
+* `main.py` The main function.
+* `ble_discovery.py` Contains the BLE scanner.
+* `ble_advertising.py` Contains supporting BLE functions.
+* `umqttsimple.py` Contains the neccessary MQTT functions.
 
 PC files
 --------

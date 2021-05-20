@@ -59,14 +59,17 @@ except OSError as e:
 
 
 while True:
-    client.publish(main_topic, "BLE SCAN STARTED")
-    list_of_devices = ble_discovery.scan(30)  # Scan for xx seconds
+
+    scantime = 30
+    s = "BLE SCANNING for %s seconds" % scantime
+    client.publish(main_topic, s)
+
+    list_of_devices = ble_discovery.scan(scantime)  # Scan for xx seconds
     print("End of BLE Scan")
-    client.publish(main_topic, "BLE SCAN RESULTS")
+
+    client.publish(main_topic, "BLE SCAN RESULTS:")
     for dev in list_of_devices:
         try:
             client.publish(main_topic, dev)
         except OSError as e:
             restart()
-			
-

@@ -20,7 +20,9 @@ topic = "hvable"
 # -----------------------------------------------------------------------------
 def on_message(client, userdata, message):
     """Callback function if an MQTT message is received."""
-    print("received message: ", str(message.payload.decode("utf-8")))
+
+    # print("received message: ", str(message.payload.decode("utf-8")))
+    print(f"{message.payload=}")
 
 
 # -----------------------------------------------------------------------------
